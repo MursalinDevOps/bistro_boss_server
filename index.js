@@ -36,6 +36,12 @@ async function run() {
         const result = await menuCollection.find().toArray();
         res.send(result);
     })
+       // endpoint to find all reviews data
+       app.get("/reviews", async(req, res)=> {
+        const result = await reviewsCollection.find().toArray();
+        res.send(result);
+    })
+
 
 
 
